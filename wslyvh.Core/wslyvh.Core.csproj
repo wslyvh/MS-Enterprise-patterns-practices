@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugAll|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugAll\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisLogFile>bin\Debug\wslyvh.Core.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FitVisit|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\FitVisit\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CBE4349-EFB1-4BEC-8521-E12BCFBD6E96}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>wslyvh.Core</RootNamespace>
+    <AssemblyName>wslyvh.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>wslyvh.Core.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\Solution Items\Bin\AutoMapper\Lib\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel">
+      <HintPath>..\Solution Items\Bin\Microsoft.WIF-v6.1\Lib\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching">
+      <HintPath>..\Solution Items\Bin\Microsoft.Practices.EnterpriseLibrary-v5.0\Libs\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Solution Items\Bin\Microsoft.Practices.EnterpriseLibrary-v5.0\Libs\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\Bin\Microsoft.Practices.EnterpriseLibrary-v5.0\Libs\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\Bin\Microsoft.Practices.EnterpriseLibrary-v5.0\Libs\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\Bin\Microsoft.Practices.EnterpriseLibrary-v5.0\Libs\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\Solution Items\Bin\Moq-v4.0.10827\Lib\v40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Solution Items\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="ApplicationContext.cs" />
+    <Compile Include="ApplicationContextFactory.cs" />
+    <Compile Include="Boot\Bootstrapper.cs" />
+    <Compile Include="Boot\BootstrapperConfiguration.cs" />
+    <Compile Include="Boot\BootstrapperTask.cs" />
+    <Compile Include="Boot\ConfigurableBootstrapper.cs" />
+    <Compile Include="Boot\Unity\DefaultUnityStaticConfigurationSource.cs" />
+    <Compile Include="Boot\Unity\UnityBootstrapper.cs" />
+    <Compile Include="Boot\Unity\UnityBootstrapperConfiguration.cs" />
+    <Compile Include="Boot\Unity\UnityBootstrapperTask.cs" />
+    <Compile Include="Caching\CachingProvider.cs" />
+    <Compile Include="Caching\EntLibCachingProvider.cs" />
+    <Compile Include="Configuration\AppSettingProvider.cs" />
+    <Compile Include="Configuration\CachedSettingProvider.cs" />
+    <Compile Include="Configuration\Source\ConfigurationSource.cs" />
+    <Compile Include="Configuration\Source\SectionNames.cs" />
+    <Compile Include="Configuration\Source\StaticConfigurationSource.cs" />
+    <Compile Include="Configuration\Source\FilePathConfigurationSource.cs" />
+    <Compile Include="Configuration\Source\SystemConfigurationSource.cs" />
+    <Compile Include="Configuration\Source\FileConfigurationSource.cs" />
+    <Compile Include="Configuration\SettingProvider.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="Data\Entity\DbContextRepository.cs" />
+    <Compile Include="Data\Entity\DbContextAutoMapperRepository.cs" />
+    <Compile Include="Extensions\Builder\LazyResolutionStrategy.cs" />
+    <Compile Include="Extensions\Container\LazyContainerExtension.cs" />
+    <Compile Include="Extensions\EventHandlerExtensions.cs" />
+    <Compile Include="Extensions\Policy\LazyResolveBuildPlanPolicy.cs" />
+    <Compile Include="Interception\ProxyGenerator.cs" />
+    <Compile Include="Interception\RetryBehavior.cs" />
+    <Compile Include="IoC\DependencyResolver.cs" />
+    <Compile Include="IoC\DependencyResolverFactory.cs" />
+    <Compile Include="ReadOnlyEventArgs.cs" />
+    <Compile Include="Data\Entity\DbContextUnitOfWorkRepository.cs" />
+    <Compile Include="Data\Entity\DbContextUnitOfWork.cs" />
+    <Compile Include="Data\Models\ModelBase.cs" />
+    <Compile Include="Data\Models\TimeAndUserStampedModel.cs" />
+    <Compile Include="Data\Models\TimeStampedModel.cs" />
+    <Compile Include="Diagnostics\MemoryStackLogger.cs" />
+    <Compile Include="Diagnostics\Logger.cs" />
+    <Compile Include="Diagnostics\LoggerFactory.cs" />
+    <Compile Include="Diagnostics\Profiler.cs" />
+    <Compile Include="Diagnostics\TraceLogger.cs" />
+    <Compile Include="Diagnostics\TraceLoggerFactory.cs" />
+    <Compile Include="Extensions\Builder\MoqBuilderStrategy.cs" />
+    <Compile Include="Extensions\Container\AutoMoqContainerExtension.cs" />
+    <Compile Include="Extensions\Builder\WasResolvedBuilderStrategy.cs" />
+    <Compile Include="Extensions\Container\BehaviorContainerExtension.cs" />
+    <Compile Include="Extensions\Container\InterceptionContainerExtension.cs" />
+    <Compile Include="Extensions\MethodInvocationExtensions.cs" />
+    <Compile Include="Extensions\MoqExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\Container\WasResolvedContainerExtension.cs" />
+    <Compile Include="Guard.cs" />
+    <Compile Include="Interception\BaseInterceptionBehavior.cs" />
+    <Compile Include="Interception\CachingBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interception\Rules\AssemblyNameRegex.cs" />
+    <Compile Include="Interception\TraceIdentityBehavior.cs" />
+    <Compile Include="Interception\ProfilingBehavior.cs" />
+    <Compile Include="Interception\Rules\AssemblyNameStartsWith.cs" />
+    <Compile Include="Interception\Rules\DoesNotHaveGenericMethods.cs" />
+    <Compile Include="Interception\Rules\NotUnityInterceptionAssembly.cs" />
+    <Compile Include="Interception\TraceBehavior.cs" />
+    <Compile Include="Interception\Security\ClaimsToWindowsTokenBehavior.cs" />
+    <Compile Include="Interception\Security\ElevatedBehavior.cs" />
+    <Compile Include="Interception\Security\ImpersonationBehavior.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Retry.cs" />
+    <Compile Include="Serialization\JsonSerializer.cs" />
+    <Compile Include="Serialization\DataSerializer.cs" />
+    <Compile Include="Serialization\Serializer.cs" />
+    <Compile Include="Serialization\XmlDataSerializer.cs" />
+    <Compile Include="ServiceClient\CachedServiceClient.cs" />
+    <Compile Include="ServiceClient\RestRequest.cs" />
+    <Compile Include="ServiceClient\RestServiceClient.cs" />
+    <Compile Include="ServiceModel\DefaultServiceModelConfiguration.cs" />
+    <Compile Include="Service\Behaviors\UnityContractBehavior.cs" />
+    <Compile Include="Service\Behaviors\UnityServiceBehavior.cs" />
+    <Compile Include="Service\Client\Authenticators\OAuthAuthenticator.cs" />
+    <Compile Include="Service\Client\Authenticators\DefaultNtlmAuthenticator.cs" />
+    <Compile Include="Service\Client\Authenticators\HttpBasicAuthenticator.cs" />
+    <Compile Include="Service\Client\Authenticators\NtlmAuthenticator.cs" />
+    <Compile Include="Service\Client\Rest\Http.cs" />
+    <Compile Include="Service\Client\Rest\HttpResponse.cs" />
+    <Compile Include="Service\Client\Rest\RestClient.cs" />
+    <Compile Include="Service\Client\Rest\RestResponse.cs" />
+    <Compile Include="Service\Client\Rest\RestRequest.cs" />
+    <Compile Include="Service\Host\Unity\UnityConfigurationServiceHostFactory.cs" />
+    <Compile Include="Service\Host\Unity\UnityInstanceContextExtension.cs" />
+    <Compile Include="Service\Host\Unity\UnityInstanceContextInitializer.cs" />
+    <Compile Include="Service\Host\Unity\UnityInstanceProvider.cs" />
+    <Compile Include="Service\Host\Unity\UnityDependencyServiceHostFactory.cs" />
+    <Compile Include="Service\Host\Unity\UnityServiceHost.cs" />
+    <Compile Include="Service\Host\Unity\UnityServiceHostFactory.cs" />
+    <Compile Include="Service\IService.cs" />
+    <Compile Include="Service\Namespaces.cs" />
+    <Compile Include="SimpleFactory.cs" />
+    <Compile Include="Singleton.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="wslyvh.Core.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\wslyvh.Core.Interfaces\wslyvh.Core.Interfaces.csproj">
+      <Project>{D55AD4B5-D9CE-4886-9CD1-15CBE8766951}</Project>
+      <Name>wslyvh.Core.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="File\" />
+    <Folder Include="Security\" />
+    <Folder Include="Task\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,80 @@
+﻿Core:
+- Boot 
+	* Config
+	* File
+	* Other (abstract)
+	* Runtime changes
+- Caching
+	* HttpContext
+	* EntLib
+- Configuration
+	* Config (System/Web settings)
+	* File
+	* Other (abstract)
+- Data
+	* Entity Framework / DbContext
+	* OData (WebApi)
+	* Unit of Work
+- Diagnostics
+	* Profiler
+	* Performance
+	* Debug Info (Trace)
+	* Logging
+		* Trace
+		* File
+		* log4net
+		* EntLib
+		* In-Memory
+	* Purge / Clean-up / Retentions
+- Extensions
+	* String
+	* File
+	* Guard
+- File Handling
+	* CRUD
+	* On disk / Memory / DB
+	* Purge / Clean-up / Retentions
+- Interception
+	* Interception Registration / Rules
+	* Default Behaviors for Components (Caching, Diagnostics, Security, etc.)
+- Security
+	* Membership Provider
+	* Role Provider
+- Serialization
+	* DataContract
+	* Json
+	* Xml
+- ServiceClient
+	* WCF (SOAP) Client
+	* WCF (REST) Client
+	* MessageBroker Client
+- ServiceModel
+	* ServiceHost (IIS, Windows Service, Self-hosted)
+	* Unity ServiceHost
+	* MessageBroker Host
+	* QoS
+- Task / Job Handling
+	* Task Framework / Management
+	* Task Configuration (interval, retries, etc)
+- Localization
+	* Resource Files
+
+Web:
+- MVP
+- HttpModules (Unity, Boot, Pluggable)?
+- HttpCache
+- Extensions (HttpContext, ?)
+- MVC?
+
+Design:
+- Component Overviews
+- Layer Diagram
+- 
+
+Test / CI:
+- Unit Tests (+80% coverage)
+- Automated Deployment (Azure)
+- Automated Test
+- Performance Test
+
+------------------------------

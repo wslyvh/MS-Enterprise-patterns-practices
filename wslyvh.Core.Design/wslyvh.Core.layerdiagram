@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="45321321-13ff-4ca0-a041-8f616610f6a3" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="1340ab3c-1183-438c-b51f-f00c89591058" name="wslyvh.Core">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="0db24368-a874-46e0-a595-13d5dee14bea" direction="Forward">
+          <layerMoniker Id="235e57d1-2c3c-498a-bc95-d31ac20424b3" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="390a2b2f-cb1d-4737-ac8e-72519925b968" name="wslyvh.Core">
+          <ArtifactNode Label="wslyvh.Core" Category="CodeSchema_Project" Id="(Assembly=../wslyvh.Core/wslyvh.Core.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=wslyvh.Core)" Label="wslyvh.Core.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="235e57d1-2c3c-498a-bc95-d31ac20424b3" name="wslyvh.Core.Interfaces">
+      <references>
+        <reference Id="86acad03-8487-455f-924b-2c79241d826d" name="wslyvh.Core.Interfaces">
+          <ArtifactNode Label="wslyvh.Core.Interfaces" Category="CodeSchema_Project" Id="(Assembly=../wslyvh.Core.Interfaces/wslyvh.Core.Interfaces.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=wslyvh.Core.Interfaces)" Label="wslyvh.Core.Interfaces.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="d9ea902c-fd20-46b6-b390-901db6d59868" name="wslyvh.Core.Web">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="81fc77f2-7c9e-429b-8556-bc5b6ac48af6" direction="Forward">
+          <layerMoniker Id="1340ab3c-1183-438c-b51f-f00c89591058" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="b5024ff8-8c7e-4ee9-8c89-144a4779da6b" direction="Forward">
+          <layerMoniker Id="235e57d1-2c3c-498a-bc95-d31ac20424b3" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="f88b3b4e-93f1-4e5f-92ea-c8c05a9e3115" name="wslyvh.Core.Web">
+          <ArtifactNode Label="wslyvh.Core.Web" Category="CodeSchema_Project" Id="(Assembly=../wslyvh.Core.Mvp/wslyvh.Core.Web.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=wslyvh.Core.Web)" Label="wslyvh.Core.Web.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

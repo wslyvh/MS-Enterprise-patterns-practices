@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{758f09df-7dbd-4597-b82f-5acc24f911c9}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>wslyvh.Core.Design</Name>
+    <RootNamespace>wslyvh.Core.Design</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <ValidateArchitecture>
+    </ValidateArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GraphCmdPath Condition="'$(GraphCmdPath)'=='' and '$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\11.0\Architect@GraphCmdDir)' != ''">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\11.0\Architect@GraphCmdDir)</GraphCmdPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'DebugAll' ">
+    <OutputPath>bin\DebugAll\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Content Include="wslyvh.Core.AssemblyDependencies.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\wslyvh.Core.Design.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\wslyvh.Core.Interfaces\wslyvh.Core.Interfaces.csproj">
+      <Name>wslyvh.Core.Interfaces</Name>
+      <Project>{d55ad4b5-d9ce-4886-9cd1-15cbe8766951}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\wslyvh.Core.Mvp\wslyvh.Core.Web.csproj">
+      <Name>wslyvh.Core.Web</Name>
+      <Project>{bd2650a4-7199-46f8-9661-2304dc137e13}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\wslyvh.Core\wslyvh.Core.csproj">
+      <Name>wslyvh.Core</Name>
+      <Project>{2cbe4349-efb1-4bec-8521-e12bcfbd6e96}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="wslyvh.Core.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="wslyvh.Core.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>wslyvh.Core.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="wslyvh.Core.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>wslyvh.Core.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+</Project>
